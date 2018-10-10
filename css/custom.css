@@ -1,0 +1,62 @@
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* forecasts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.forecasts {
+  background-image: url('../images/forecasts-bg.jpg');
+  background-size: cover;
+  color: #044389;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+.forecast-multiplier {
+  margin-bottom: .5rem;
+  color: #044389;
+}
+.forecast-heading {
+  margin-bottom: .3rem;
+}
+.forecast-description {
+  opacity: .8;
+  font-weight: 300;
+}
+
+.forecasts .row {
+  padding-bottom: 5rem;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .section {
+    padding: 14rem 0 15rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+}
