@@ -6,12 +6,13 @@ window.onload = function what(){
 		request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=ad2f4ea29134ad456296567cc7fbb4ba", false);
 		request.send(null);
 		var data = JSON.parse(request.responseText);
-		console.log(data);
+		//convert K to F
 		var temp = Math.round((data.main.temp - 273.15) * 9/5 + 32);
-		document.getElementById("temp" + i).innerHTML = temp + "&deg;";
-		document.getElementById("city" + i).innerHTML = city;
+		$('#temp' + i).html(temp + '&deg;');
+		$('#city' + i).html(city);
 		// document.getElementById("description" + i).innerHTML = data.weather[0].main;
-		document.getElementById("icon" + i).innerHTML = "<img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>";
+		// document.getElementById("icon" + i).innerHTML = "<img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>";
+		$('#icon' + i).html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>");
 		i += 1;
 	});
 }
