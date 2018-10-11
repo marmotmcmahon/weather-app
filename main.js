@@ -11,6 +11,9 @@ window.onload = function what(){
 		$('#temp' + i).html(temp + '&deg;');
 		$('#city' + i).html(city);
 		$('#icon' + i).html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>");
+
+		// JSON insertions for modals
+		$('#modal' + i + ' > h2').html(city + " Weather");
 		i += 1;
 	});
 
