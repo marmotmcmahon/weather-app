@@ -10,9 +10,12 @@ window.onload = function what(){
 		var temp = Math.round((data.main.temp - 273.15) * 9/5 + 32);
 		$('#temp' + i).html(temp + '&deg;');
 		$('#city' + i).html(city);
-		// document.getElementById("description" + i).innerHTML = data.weather[0].main;
-		// document.getElementById("icon" + i).innerHTML = "<img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>";
 		$('#icon' + i).html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>");
 		i += 1;
+	});
+
+	//toggle details section
+	$('.details').click(function(){
+	    $(this).find('.hider').toggle();
 	});
 }

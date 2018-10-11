@@ -15,7 +15,7 @@
   margin-bottom: 1.2rem;
 }
 
-/* forecasts
+/* Forecast overviews
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .forecasts {
   background-image: url('../images/forecasts-bg.jpg');
@@ -59,4 +59,9 @@
   .section {
     padding: 20rem 0 19rem;
   }
+}
+
+/* Pagewide edits */
+a {
+  text-decoration: none;
 }
