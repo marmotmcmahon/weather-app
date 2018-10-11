@@ -8,12 +8,23 @@ window.onload = function what(){
 		var data = JSON.parse(request.responseText);
 		//convert K to F
 		var temp = Math.round((data.main.temp - 273.15) * 9/5 + 32);
+
+		//JSON insertions for basic forecasts
 		$('#temp' + i).html(temp + '&deg;');
 		$('#city' + i).html(city);
 		$('#icon' + i).html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>");
 
 		// JSON insertions for modals
-		$('#modal' + i + ' > h2').html(city + " Weather");
+		var modal = "#modal" + i;
+		$(modal + ' > h2').html(city + " Weather");
+		$(modal + ' > p:nth-child(2)').html(temp + '&deg;' + " with " + data.weather[0].description);
+		$(modal + ' > p:nth-child(3)').html(data.wind.speed + " mph winds");
+		$(modal + ' > p:nth-child(4)').html(data.main.humidity + "% humidity");
+		// $(modal + ' > h2').html();
+		// $(modal + ' > h2').html();
+		console.log(data);
+
+		// Increase counter
 		i += 1;
 	});
 
