@@ -5,9 +5,9 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Marmot's Weather App</title>
+  <meta name="Displays the weather in five of my favorite cities" content="">
+  <meta name="Marmot Mcmahon" content="">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -21,6 +21,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -28,19 +29,48 @@
 
 </head>
 <body>
+  <script type="text/javascript" src="main.js"></script>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Margot's Weather app!</h4>
-        <p>OK let's get started :~)</p>
+  <div class="section forecasts">
+    <div class="container">
+      <div class="row">
+        <div class="one-third column forecast">
+          <h5 class="forecast-multiplier" id="city1"></h5>
+          <h2 class="forecast-heading" id="temp1"></h2>
+          <!-- <p class="forecast-description" id=description1></p> -->
+          <div id="icon1"></div>
+        </div>
+        <div class="one-third column forecast">
+          <h5 class="forecast-multiplier" id="city2"></h5>
+          <h2 class="forecast-heading" id="temp2"></h2>
+          <!-- <p class="forecast-description" id=description2></p> -->
+          <div id="icon2"></div>
+        </div>
+        <div class="one-third column forecast">
+          <h5 class="forecast-multiplier" id="city3"></h5>
+          <h2 class="forecast-heading" id="temp3"></h2>
+          <!-- <p class="forecast-description" id=description3></p> -->
+          <div id="icon3"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column forecast">
+          <h5 class="forecast-multiplier" id="city4"></h5>
+          <h2 class="forecast-heading" id="temp4"></h2>
+          <!-- <p class="forecast-description" id=description4></p> -->
+          <div id="icon4"></div>
+        </div>
+        <div class="one-half column forecast">
+          <h5 class="forecast-multiplier" id="city5"></h5>
+          <h2 class="forecast-heading" id="temp5"></h2>
+          <!-- <p class="forecast-description" id=description5></p> -->
+          <div id="icon5"></div>
+        </div>
       </div>
     </div>
   </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+[
+    {
+      "Teams":"Wycombe Wanderers",
+      "Lon":-0.800299,
+      "Lat":51.6306,
+      "Weather":"  api.openweathermap.org/data/2.5/weather?lat=51.6306&lon=-0.800299&mode=html"
+    },
+    {
+      "Teams":"Livingston",
+      "Lon":-3.52207,
+      "Lat":55.8864,
+      "Weather":"  api.openweathermap.org/data/2.5/weather?lat=55.8864&lon=-3.52207&mode=html"
+    },
+    {
+      "Teams":"Brighton and Hove Albion",
+      "Lon":-0.08014,
+      "Lat":50.8609,
+      "Weather":"  api.openweathermap.org/data/2.5/weather?lat=50.8609&lon=-0.08014&mode=html"
+    }
+]
