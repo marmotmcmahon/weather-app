@@ -49,10 +49,10 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
   <div class="nav">
-      <img src="images/nav-logo.png">
-    </div>
+    <img src="images/nav-logo.png">
+  </div>
+
   <div class='section forecasts'>
     <div class='container'>
       <div class='row'>
@@ -96,8 +96,15 @@
         </div>
         <div class='one-third column forecast'>
           <h5 class='forecast-multiplier'>Pick a city!</h5>
-          <input class="u-half-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
-          <input class="button-primary" type="submit" value="Submit">
+          <form>
+            <input type="text" id="customCityInput" value="">
+            <input class="button-primary" type="button" value="Submit" onclick="customCity()"/>
+            <a href="#modalCustomCity" rel='modal:open'>
+              <h5 class='forecast-multiplier' id='cityCustomCity'></h5>
+              <h2 class='forecast-heading' id='tempCustomCity'></h2>
+              <div id='iconCustomCity'></div>
+            </a>
+          </form>
         </div>
       </div>
     </div>
