@@ -95,17 +95,17 @@
           </a>
         </div>
         <div class='one-third column forecast'>
-          <h5 class='forecast-multiplier'>Pick a city!</h5>
-          <form>
+          <form id='customCityForm'>
+            <h5 class='forecast-multiplier'>Pick a city!</h5>
             <input type="text" id="customCityInput" value="">
             <input class="button-primary" type="button" value="Submit" onclick="customCity()"/>
             <p id="customCityError"></p>
-            <a href="#modalCustomCity" rel='modal:open'>
-              <h5 class='forecast-multiplier' id='cityCustomCity'></h5>
-              <h2 class='forecast-heading' id='tempCustomCity'></h2>
-              <div id='iconCustomCity'></div>
-            </a>
           </form>
+          <a href="#modalCustomCity" rel='modal:open'>
+            <h5 class='forecast-multiplier' id='cityCustomCity'></h5>
+            <h2 class='forecast-heading' id='tempCustomCity'></h2>
+            <div id='iconCustomCity'></div>
+          </a>
         </div>
       </div>
     </div>

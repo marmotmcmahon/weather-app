@@ -57,6 +57,8 @@ function customCity() {
 		return;
 	}
 
+	$('#customCityForm').hide();
+	
 	// convert K to F
 	var temp = Math.round((data.main.temp - 273.15) * 9/5 + 32);
 
