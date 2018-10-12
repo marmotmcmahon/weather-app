@@ -1,5 +1,5 @@
 window.onload = function what(){
-	var cities = ["New York", "Philadelphia", "Austin", "Portland", "Beacon"];
+	var cities = ["New York", "Philadelphia", "Austin", "Moscow", "Beacon", "Zagreb"].sort();
 	var i = 1;
 	cities.forEach(function(city) {
 		var request = new XMLHttpRequest();
@@ -8,6 +8,11 @@ window.onload = function what(){
 		var data = JSON.parse(request.responseText);
 		//convert K to F
 		var temp = Math.round((data.main.temp - 273.15) * 9/5 + 32);
+
+		//Exit early if cities.length exceeds number of display locations (5)
+		if (!$('#temp' + i)) {
+			return;
+		}
 
 		//JSON insertions for basic forecasts
 		$('#temp' + i).html(temp + '&deg;');
@@ -26,10 +31,5 @@ window.onload = function what(){
 
 		// Increase counter
 		i += 1;
-	});
-
-	//toggle details section
-	$('.details').click(function(){
-	    $(this).find('.hider').toggle();
 	});
 }
