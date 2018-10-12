@@ -78,3 +78,7 @@
 a {
   text-decoration: none;
 }
+
+.forecast h2:hover {
+  font-weight: bold;
+}
