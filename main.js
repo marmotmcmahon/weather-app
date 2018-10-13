@@ -1,79 +1,51 @@
 window.onload = function populateForecasts() {
 
-	var cities = ["New York", "Philadelphia", "Austin", "Moscow", "Beacon", "Zagreb"].sort();
+	cities = ["New York", "Philadelphia", "Austin", "Moscow", "Beacon", "Zagreb"].sort();
 
 	// Counter
-	var i = 1;
+	i = 1;
 
 	// API request and JSON insertion for default cities
 	// Idea: figure out how to request all cities in one go
 	cities.forEach(function(city) {
-		var request = new XMLHttpRequest();
-		request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=ad2f4ea29134ad456296567cc7fbb4ba", false);
-		request.send(null);
-		var data = JSON.parse(request.responseText);
+
+		apiRequest(city); // Make API request
 		
-		// convert K to F
-		toFahrenheit(data.main.temp);
+		toFahrenheit(data.main.temp); // Convert K to F
 
-		// Exit early if cities.length exceeds number of HTML display locations (5)
-		if (!$('#temp' + i)) { return; }
+		if (!$('#temp' + i )) { return; } // Exit early if .indexOf(city) > 4
 
-		// JSON insertions for basic forecasts
-		$('#temp' + i).html(temp + '&deg;');
-		$('#city' + i).html(city);
-		$('#icon' + i).html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>");
+		forecastInsertions(data, city); // JSON insertions for forecast previews
 
-		// JSON insertions for modals
-		var modal = "#modal" + i;
-		$(modal + ' > h2').html(city + " Weather");
-		$(modal + ' > p:nth-child(2)').html(temp + '&deg;' + " with " + data.weather[0].description);
-		$(modal + ' > p:nth-child(3)').html(data.wind.speed + " mph winds");
-		$(modal + ' > p:nth-child(4)').html(data.main.humidity + "% humidity");
-		// $(modal + ' > h2').html();
-		// $(modal + ' > h2').html();
+		modalInsertions(data, city); // JSON insertions for modals
 		
-		// console.log(data);
-
-		// Increase counter
-		i += 1;
+		i += 1; // Increase counter
 	});
 
-	// Prevent load lag by showing section only after API completion
+	// Prevent lag by showing forecasts only after API completion
 	$('.forecasts').show();
 
-} // end Onload function
+} // end Onload
 
 // Custom city form input & API call
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 function customCity() {
 
-	// Get user input
-	// ––––––––––––––––––––––––––––––––––––––––––––––––––
-	var city = document.getElementById('customCityInput').value;
+	city = document.getElementById('customCityInput').value; // Get user input
 
-	// Make API request
-	// ––––––––––––––––––––––––––––––––––––––––––––––––––
-	var request = new XMLHttpRequest();
-	request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=ad2f4ea29134ad456296567cc7fbb4ba", false);
-	request.send(null);
-	var data = JSON.parse(request.responseText);
+	apiRequest(city); // Make API request
+
 	if (data.message == 'city not found') {
 		$('#customCityError').html("City not found 🤢");
 		return;
 	}
 
-	$('#customCityForm').hide();
+	$('#customCityForm').hide(); // Hide form
 	
-	// convert K to F
-	// ––––––––––––––––––––––––––––––––––––––––––––––––––
-	toFahrenheit(data.main.temp);
+	toFahrenheit(data.main.temp); // convert K to F
 
-	// JSON insertions for custom city
-	// ––––––––––––––––––––––––––––––––––––––––––––––––––
-	$('#cityCustomCity').html(city);
-	$('#tempCustomCity').html(temp + '&deg;');
-	$('#iconCustomCity').html("<img src=http://openweathermap.org/img/w/10d.png>");
+	i = "Custom";
+	forecastInsertions(data, city); // JSON insertions for forecast preview
 
 	// JSON insertions for modals
 	// $(modalCustomCity + ' > h2').html(city + " Weather");
