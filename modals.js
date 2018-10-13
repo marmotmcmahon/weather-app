@@ -1,5 +1,5 @@
 /*
-    A simple jQuery modal (http://github.com/kylefox/jquery-modal)
+    A simple jQuery modal (https://github.com/kylefox/jquery-modal)
     Version 0.9.1
 */
 ! function(o) {
