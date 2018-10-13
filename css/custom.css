@@ -28,9 +28,21 @@
   padding-top: 15px;
 }
 
+.footer {
+  display: none;
+  background-color: #BBE8F1;
+  height: 75px;
+}
+
+.footer p {
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
 /* Forecast overviews
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .forecasts {
+  display: none;
   background-image: url('../images/forecasts-bg.jpg');
   background-size: cover;
   color: #044389;
@@ -49,14 +61,17 @@
   font-weight: 300;
 }
 
-.forecasts .row {
-  /*padding-bottom: 5rem;*/
+.forecast h2:hover {
+  font-weight: bold;
 }
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
   .section {
     padding: 12rem 0 11rem;
+  }
+  .row {
+    padding-top: 5rem;
   }
 }
 
@@ -79,6 +94,6 @@ a {
   text-decoration: none;
 }
 
-.forecast h2:hover {
-  font-weight: bold;
+p {
+  color: #044389;
 }

@@ -28,3 +28,8 @@ function modalInsertions(obj, city) {
 	// $(modal + ' > h2').html();
 	// $(modal + ' > h2').html();
 }
+
+function loadPage() {
+	$('.forecasts, .footer').show(); // Prevents uneven pageload
+	$('#year').html((new Date).getFullYear()); // Adds copyright year
+}

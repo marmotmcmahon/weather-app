@@ -22,7 +22,7 @@ window.onload = function populateForecasts() {
 		i += 1; // Increase counter
 	});
 
-	$('.forecasts').show(); // Prevents uneven pageload
+	loadPage();
 
 } // end Onload
 
