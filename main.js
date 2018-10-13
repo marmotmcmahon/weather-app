@@ -11,8 +11,6 @@ window.onload = function populateForecasts() {
 
 		apiRequest(city); // Make API request
 		
-		toFahrenheit(data.main.temp); // Convert K to F
-
 		if (!$('#temp' + i )) { return; } // Exit early if .indexOf(city) > 4
 
 		forecastInsertions(data, city); // JSON insertions for forecast previews
@@ -21,6 +19,15 @@ window.onload = function populateForecasts() {
 		
 		i += 1; // Increase counter
 	});
+	console.log(data);
+
+	function converter(x) {
+		return x + 1;
+	}
+
+	test = 1;
+	test = converter(test);
+	console.log(test);
 
 	loadPage();
 
@@ -29,6 +36,8 @@ window.onload = function populateForecasts() {
 // Custom city form input & API call
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 function customCity() {
+
+	geoLocation();
 
 	city = document.getElementById('customCityInput').value; // Get user input
 
