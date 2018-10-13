@@ -9,8 +9,11 @@ function apiRequest(city) {
 	data = JSON.parse(request.responseText);
 }
 
-function geoLocation() {
-	console.log("geolocation function fired!");
+function zipRequest(zip) {
+	var request = new XMLHttpRequest();
+	request.open("GET", "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&appid=ad2f4ea29134ad456296567cc7fbb4ba", false);
+	request.send(null);
+	data = JSON.parse(request.responseText);
 }
 
 // JSON insertions for forecast previews

@@ -37,29 +37,32 @@ window.onload = function populateForecasts() {
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 function customCity() {
 
-	geoLocation();
+	zip = document.getElementById('customCityInput').value; // Get user input
 
-	city = document.getElementById('customCityInput').value; // Get user input
+	zipRequest(zip); // Make API request
 
-	apiRequest(city); // Make API request
+	city = data.name;
 
-	if (data.message == 'city not found') {
-		$('#customCityError').html("City not found 🤢");
+	const zipCodeRegex = /^\d{5}$/; // ZIP validator
+
+	if ((data.message == 'city not found') || !zipCodeRegex.test(zip)) {
+		$('#customCityError').html("Invalid ZIP code 🤢");
 		return;
 	}
 
 	$('#customCityForm').hide(); // Hide form
 	
-	toFahrenheit(data.main.temp); // convert K to F
+	// toFahrenheit(data.main.temp); // convert K to F
 
 	i = "Custom";
 	forecastInsertions(data, city); // JSON insertions for forecast preview
 
+	// modalInsertions(data, city);
+
 	// JSON insertions for modals
+	$('#bonia').html(city);
 	// $(modalCustomCity + ' > h2').html(city + " Weather");
 	// $(modalCustomCity + ' > p:nth-child(2)').html(temp + '&deg;' + " with " + data.weather[0].description);
 	// $(modalCustomCity + ' > p:nth-child(3)').html(data.wind.speed + " mph winds");
 	// $(modalCustomCity + ' > p:nth-child(4)').html(data.main.humidity + "% humidity");
-
-	console.log(data);
 }
