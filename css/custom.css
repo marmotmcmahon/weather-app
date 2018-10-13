@@ -35,7 +35,7 @@
   background-size: cover;
   color: #044389;
   padding-bottom: 0rem;
-  padding-top: 0rem;
+  padding-top: 4rem;
 }
 .forecast-multiplier {
   margin-bottom: .5rem;
@@ -50,7 +50,7 @@
 }
 
 .forecasts .row {
-  padding-bottom: 5rem;
+  /*padding-bottom: 5rem;*/
 }
 
 /* Bigger than 550 */
