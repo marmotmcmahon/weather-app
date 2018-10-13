@@ -65,6 +65,9 @@
   font-weight: bold;
 }
 
+
+/* Responsiveness
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Bigger than 550 */
 @media (min-width: 550px) {
   .section {
@@ -89,11 +92,30 @@
   }
 }
 
-/* Pagewide edits */
+/* Pagewide edits
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   text-decoration: none;
 }
 
 p {
   color: #044389;
+}
+
+
+/* Modals
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.modal {
+  padding: 25px 70px;
+  padding-top: 30px;
+}
+
+.modal h2 {
+  color: #044389;
+}
+
+.modal p {
+  color: #1EAEDB;
+  font-size: 24px;
 }

@@ -38,8 +38,6 @@ function modalInsertions(obj, city) {
 	$(modal + ' > p:nth-child(3)').html("High " + temp_max + "&deg; / Low " + temp_min + "&deg;");
 	$(modal + ' > p:nth-child(4)').html(data.wind.speed + " mph winds");
 	$(modal + ' > p:nth-child(5)').html(data.main.humidity + "% humidity");
-
-	// $(modal + ' > h2').html();
 }
 
 function loadPage() {
