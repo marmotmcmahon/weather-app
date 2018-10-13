@@ -2,11 +2,11 @@ window.onload = function populateForecasts() {
 
 	cities = ["New York", "Philadelphia", "Austin", "Moscow", "Beacon", "Zagreb"].sort();
 
-	// Counter
-	i = 1;
+	i = 1; // Counter
 
 	// API request and JSON insertion for default cities
 	// Idea: figure out how to request all cities in one go
+	// ––––––––––––––––––––––––––––––––––––––––––––––––––
 	cities.forEach(function(city) {
 
 		apiRequest(city); // Make API request
@@ -22,8 +22,7 @@ window.onload = function populateForecasts() {
 		i += 1; // Increase counter
 	});
 
-	// Prevent lag by showing forecasts only after API completion
-	$('.forecasts').show();
+	$('.forecasts').show(); // Prevents uneven pageload
 
 } // end Onload
 
@@ -55,6 +54,3 @@ function customCity() {
 
 	console.log(data);
 }
-
-
-
