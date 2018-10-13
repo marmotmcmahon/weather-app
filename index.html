@@ -29,16 +29,14 @@
 
   <!-- Libraries
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script type="text/javascript" src="modals.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
-
-  <!-- Libraries
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script> 
   $(function(){
-    $("#modals").load("modals.html"); 
+    $("#modals").load("modals.html"); // Load modal html
   });
   </script>
 
@@ -58,21 +56,21 @@
       <div class='row'>
         <div class='one-third column forecast'>
           <a href='#modal1' rel='modal:open'>
-            <h5 class='forecast-multiplier' id='city1'></h5>
+            <h5 class='forecast-dark' id='city1'></h5>
             <h2 class='forecast-heading' id='temp1'></h2>
             <div id='icon1'></div>
           </a>
         </div>
         <div class='one-third column forecast'>
           <a href="#modal2" rel='modal:open'>
-            <h5 class='forecast-multiplier' id='city2'></h5>
+            <h5 class='forecast-dark' id='city2'></h5>
             <h2 class='forecast-heading' id='temp2'></h2>
             <div id='icon2'></div>
           </a>
         </div>
         <div class='one-third column forecast'>
           <a href="#modal3" rel='modal:open'>
-            <h5 class='forecast-multiplier' id='city3'></h5>
+            <h5 class='forecast-dark' id='city3'></h5>
             <h2 class='forecast-heading' id='temp3'></h2>
             <div id='icon3'></div>
           </a>
@@ -81,27 +79,27 @@
       <div class='row'>
         <div class='one-third column forecast'>
           <a href="#modal4" rel='modal:open'>
-            <h5 class='forecast-multiplier' id='city4'></h5>
+            <h5 class='forecast-dark' id='city4'></h5>
             <h2 class='forecast-heading' id='temp4'></h2>
             <div id='icon4'></div>
           </a>
         </div>
         <div class='one-third column forecast'>
           <a href="#modal5" rel='modal:open'>
-            <h5 class='forecast-multiplier' id='city5'></h5>
+            <h5 class='forecast-dark' id='city5'></h5>
             <h2 class='forecast-heading' id='temp5'></h2>
             <div id='icon5'></div>
           </a>
         </div>
         <div class='one-third column forecast'>
           <form id='customCityForm'>
-            <h5 class='forecast-multiplier'>Enter your ZIP code!</h5>
+            <h5 class='forecast-dark'>Enter your ZIP code!</h5>
             <input type="text" id="customCityInput" value="">
-            <input class="button-primary" type="button" value="Submit" onclick="customCity()"/>
+            <input class="button-primary" type="button" value="Submit" onclick="customCity()">
             <p id="customCityError"></p>
           </form>
-          <a href="#modalCustomCity" rel='modal:open'>
-            <h5 class='forecast-multiplier' id='cityCustom'></h5>
+          <a href="#modalCustom" rel='modal:open'>
+            <h5 class='forecast-dark' id='cityCustom'></h5>
             <h2 class='forecast-heading' id='tempCustom'></h2>
             <div id='iconCustom'></div>
           </a>

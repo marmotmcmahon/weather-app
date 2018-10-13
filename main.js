@@ -57,12 +57,13 @@ function customCity() {
 	i = "Custom";
 	forecastInsertions(data, city); // JSON insertions for forecast preview
 
-	// modalInsertions(data, city);
+	modalInsertions(data, city);
 
 	// JSON insertions for modals
-	$('#bonia').html(city);
+	// $('#bonia').html(city);
 	// $(modalCustomCity + ' > h2').html(city + " Weather");
 	// $(modalCustomCity + ' > p:nth-child(2)').html(temp + '&deg;' + " with " + data.weather[0].description);
 	// $(modalCustomCity + ' > p:nth-child(3)').html(data.wind.speed + " mph winds");
 	// $(modalCustomCity + ' > p:nth-child(4)').html(data.main.humidity + "% humidity");
+
 }
