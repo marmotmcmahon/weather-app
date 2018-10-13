@@ -4,14 +4,14 @@ function toFahrenheit(temp) {
 
 function apiRequest(city) {
 	var request = new XMLHttpRequest();
-	request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=ad2f4ea29134ad456296567cc7fbb4ba", false);
+	request.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=ad2f4ea29134ad456296567cc7fbb4ba", false);
 	request.send(null);
 	data = JSON.parse(request.responseText);
 }
 
 function zipRequest(zip) {
 	var request = new XMLHttpRequest();
-	request.open("GET", "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&appid=ad2f4ea29134ad456296567cc7fbb4ba", false);
+	request.open("GET", "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&appid=ad2f4ea29134ad456296567cc7fbb4ba", false);
 	request.send(null);
 	data = JSON.parse(request.responseText);
 }
@@ -22,7 +22,7 @@ function forecastInsertions(obj, city) {
 	temp = toFahrenheit(data.main.temp);
 	$('#temp' + i).html(temp + '&deg;');
 	$('#city' + i).html(city);
-	$('#icon' + i).html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>");
+	$('#icon' + i).html("<img src=https://openweathermap.org/img/w/" + data.weather[0].icon + ".png>");
 }
 
 // JSON insertions into modals template
